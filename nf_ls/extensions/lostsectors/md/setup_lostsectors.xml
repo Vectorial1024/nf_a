@@ -1,22 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<add sel="//cue[@name='LSJobs']/actions/set_job_active[@job=&quot;'split_trader_bulk_liquid_large'&quot;]" type="@chance" >0</add>
-	<add sel="(//cue[@name='LSJobs']/actions/set_job_active[@job=&quot;'split_trader_container_energy_large'&quot;])[1]" type="@chance" >0</add>
-	<add sel="(//cue[@name='LSJobs']/actions/set_job_active[@job=&quot;'split_trader_container_energy_large'&quot;])[2]" type="@chance" >0</add>
-	<add sel="//cue[@name='LSJobs']/actions/set_job_active[@job=&quot;'split_miner_ice_large'&quot;]" type="@chance" >0</add>
-	<add sel="//cue[@name='LSJobs']/actions/set_job_active[@job=&quot;'split_patrol_lsa01'&quot;]" type="@chance" >0</add>
-	<add sel="//cue[@name='LSJobs']/actions/set_job_active[@job=&quot;'split_frigate_lsa01'&quot;]" type="@chance" >0</add>
-	<add sel="//cue[@name='LSJobs']/actions/set_job_active[@job=&quot;'split_destroyer_lsa01'&quot;]" type="@chance" >0</add>
-	<add sel="//cue[@name='LSJobs']/actions/set_job_active[@job=&quot;'split_destroyer_zone_lsa01'&quot;]" type="@chance" >0</add>
+	<add sel="/cues/cue[@name='ActivateJobs']/actions/set_job_active[@job=&quot;split_universal_trader_large&quot;]" type="@chance">0</add>
+	<add sel="/cues/cue[@name='ActivateJobs']/actions/set_job_active[@job=&quot;split_trader_refined_large&quot;]" type="@chance">0</add>
+	<add sel="/cues/cue[@name='ActivateJobs']/actions/set_job_active[@job=&quot;split_trader_food_large&quot;]" type="@chance">0</add>
+	<add sel="/cues/cue[@name='ActivateJobs']/actions/set_job_active[@job=&quot;split_trader_water_large&quot;]" type="@chance">0</add>
+	<add sel="/cues/cue[@name='ActivateJobs']/actions/set_job_active[@job=&quot;split_trader_energy_large&quot;]" type="@chance">0</add>
+	<add sel="/cues/cue[@name='ActivateJobs']/actions/set_job_active[@job=&quot;split_trader_agricultural_large&quot;]" type="@chance">0</add>
+	<add sel="/cues/cue[@name='ActivateJobs']/actions/set_job_active[@job=&quot;split_miner_ice_large&quot;]" type="@chance">0</add>
+	<add sel="/cues/cue[@name='ActivateJobs']/actions/set_job_active[@job=&quot;split_miner_minerals_large&quot;]" type="@chance">0</add>
+	<add sel="/cues/cue[@name='ActivateJobs']/actions/set_job_active[@job=&quot;split_patrol_lsa01&quot;]" type="@chance">0</add>
+	<add sel="/cues/cue[@name='ActivateJobs']/actions/set_job_active[@job=&quot;split_frigate_lsa01&quot;]" type="@chance">0</add>
+	<add sel="/cues/cue[@name='ActivateJobs']/actions/set_job_active[@job=&quot;split_destroyer_lsa01&quot;]" type="@chance">0</add>
+	<add sel="/cues/cue[@name='ActivateJobs']/actions/set_job_active[@job=&quot;split_destroyer_zone_lsa01&quot;]" type="@chance">0</add>
 <!--	
 	<add sel="//cue[@name='LSJobs']/actions/set_job_active[@job=&quot;'arg_fighter_patrol_maelstrom'&quot;]" type="@chance" >0</add>
 	<add sel="//cue[@name='LSJobs']/actions/set_job_active[@job=&quot;'ls_trader_guest_ryak_large'&quot;]" type="@chance" >0</add>
 -->
-	<replace sel="//cue[@name='Add_Drone']/actions" silent="1">
-		<actions>
-			<do_if value="param.itemtraderlists.dronetraderlists.{1}.indexof.{[ware.spe_drone_interceptor_ls, 1, 1, 30]}" negate="true">
-				<append_to_list name="param.itemtraderlists.dronetraderlists.{1}" exact="[ware.spe_drone_interceptor_ls, 1, 1, 30]" />
-			</do_if>
-		</actions>
-	</replace>
 </diff>
